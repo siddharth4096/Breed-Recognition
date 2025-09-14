@@ -163,8 +163,10 @@ window.addEventListener("scroll", () => {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register("/sw.js")
-      .then(reg => console.log("✅ Service Worker registered for FLW:", reg))
+      .register("/Breed-Recognition/sw.js", { scope: "/Breed-Recognition/" })
+      .then(reg => console.log("✅ Service Worker registered for FLW:", reg.scope))
       .catch(err => console.error("❌ Service Worker failed:", err));
   });
 }
+
+
