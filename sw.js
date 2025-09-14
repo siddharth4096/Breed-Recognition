@@ -2,7 +2,7 @@
 const CACHE_NAME = "sih-flw-v1";
 
 const FILES_TO_CACHE = [
-    "/",   // root (GitHub Pages index, if any)
+ 
   
   "/Breed-Recognition/index.html",
   "/Breed-Recognition/welcome-page-style.css",
@@ -88,4 +88,5 @@ self.addEventListener("fetch", event => {
     event.respondWith(fetch(event.request));
   }
 });
+
 
