@@ -1305,6 +1305,22 @@ async function compareWithReference(testDataUrl, refUrl) {
 
 
 
+// 🔹 Snapshot helper: take frame from <video id="camera">
+async function getVideoSnapshotDataUrl() {
+  const video = document.getElementById("camera");
+  if (!video) return null;
+
+  const canvas = document.createElement("canvas");
+  canvas.width = video.videoWidth || 640;
+  canvas.height = video.videoHeight || 480;
+
+  const ctx = canvas.getContext("2d");
+  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+  return canvas.toDataURL("image/jpeg", 0.9);
+}
+
+
 /* -------------- Capture flow (unified with <85% confidence check) -------------- */
 async function captureAndPredict() {
   // 1) take snapshot
@@ -1791,5 +1807,6 @@ function preloadDemoData() {
 }
 
   
+
 
 
