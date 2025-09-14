@@ -1299,7 +1299,7 @@ async function captureAndPredict() {
 
   // 3) 🔹 Confidence-based guided capture (threshold = 85%)
   const top = demoTop3[0];
-  if (top.score < 60) {
+  if (top.score < 70) {
     const overlay = document.getElementById("breed-overlay");
     overlay.textContent = "⚠️ Low confidence (<85%). Please retake photo (better lighting/angle).";
     overlay.classList.add("warning");
@@ -1360,7 +1360,7 @@ if (uploadInput) {
 
       // 🔹 Confidence-based guided capture (threshold = 85%)
       const top = top3[0];
-      if (top.score < 60 {
+      if (top.score < 70 {
         const overlay = document.getElementById("breed-overlay");
         overlay.textContent = `⚠️ Low confidence (${top.score}%). Please upload a clearer photo.`;
         overlay.classList.add("warning");
@@ -1797,6 +1797,7 @@ function preloadDemoData() {
 }
 
   
+
 
 
 
