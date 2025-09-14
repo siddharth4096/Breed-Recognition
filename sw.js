@@ -1,27 +1,48 @@
 // sw.js
 const CACHE_NAME = "sih-flw-v1";
+
 const FILES_TO_CACHE = [
-  "/",   // root (GitHub Pages index, if any)
+    "/",   // root (GitHub Pages index, if any)
+  
+  "/Breed-Recognition/index.html",
+  "/Breed-Recognition/welcome-page-style.css",
+  "/Breed-Recognition/welcome-page-script.js",
+  "/Breed-Recognition/loader.css",
+  "/Breed-Recognition/loader.js",
 
-  // Welcome pages
-  "/index.html",
-  "/welcome-page-style.css",
-  "/welcome-page-script.js",
-  "/loader.css",
-  "/loader.js",
+  "/Breed-Recognition/flw-login-page.html",
+  "/Breed-Recognition/flw-script.js",
+  "/Breed-Recognition/common-login-style.css",
 
-  // FLW login
-  "/flw-login-page.html",
-  "/flw-script.js",
-  "/common-login-style.css",
-
-  // FLW dashboard
-  "/flw-dashboard/test.html",
-  "/flw-dashboard/test-style.css",
-  "/flw-dashboard/test-script.js",
-
-
+  "/Breed-Recognition/flw-dashboard/test.html",
+  "/Breed-Recognition/flw-dashboard/test-style.css",
+  "/Breed-Recognition/flw-dashboard/test-script.js",
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Install - cache all FLW files
 self.addEventListener("install", event => {
@@ -67,3 +88,4 @@ self.addEventListener("fetch", event => {
     event.respondWith(fetch(event.request));
   }
 });
+
