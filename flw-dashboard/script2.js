@@ -1348,8 +1348,8 @@ if (uploadInput) {
     reader.onload = async (e) => {
       const dataUrl = e.target.result;
 
-      const girScore = await compareWithReference(dataUrl, "gir_ref.jpg");
-      const sahiwalScore = await compareWithReference(dataUrl, "sahiwal_ref.jpg");
+      const girScore = await compareWithReference(dataUrl, "Gir_49.jpg");
+      const sahiwalScore = await compareWithReference(dataUrl, "Sahiwal_45.jpg");
 
       let top3;
       if (girScore < sahiwalScore) {
@@ -1791,4 +1791,5 @@ function preloadDemoData() {
 }
 
   
+
 
